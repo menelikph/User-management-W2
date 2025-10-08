@@ -9,5 +9,5 @@ export interface User{
 
 export interface NewUser{
     username: string;
-    password: string | number;
+    password?: string | number;
 }

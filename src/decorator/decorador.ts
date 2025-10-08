@@ -8,7 +8,7 @@ export function DefaultUserProps(target: unknown, propertyKey: string, descripto
     const originalMethod = descriptor.value; // Guardamos la función 'create' original
 
     descriptor.value = function (newUser: NewUser): User {
-        console.log(`[DECORATOR 🛡️] Añadiendo metadata a ${newUser.username}...`);
+        console.log(`[DECORATOR] Añadiendo metadata a ${newUser.username}...`);
         
         // 1. Inyectamos los valores automáticos
         const decoratedUser: User = {
